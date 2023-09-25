@@ -1,0 +1,260 @@
+:root {
+    font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.6rem;
+    color: #242424;
+    font-family: "Poppins", sans-serif;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+}
+
+section {
+    padding-inline: 1rem;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    margin-inline: auto;
+    background-image: url("/img/bg.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    background: #ece7d5;
+    max-width: 820px;
+    margin-inline: auto;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: rgb(123 74 45);
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-image: url("img/morcego.png");
+    background-size: 100%;
+    transform: rotate(30deg);
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 150px;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-image: url("img/morcego-2.png");
+    background-size: 100%;
+    transform: rotate(-40deg);
+}
+
+.logo {
+    max-width: 350px;
+    margin-inline: auto;
+}
+
+.description {
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+    padding-block: 1rem;
+    max-width: 30ch;
+    margin-inline: auto;
+    line-height: 1.1;
+}
+
+.about,
+.quote,
+.albuns-section,
+.live {
+    padding-block: 4rem;
+}
+
+.about > *:where(:not(:first-child)) {
+    margin-top: 1.6rem;
+}
+
+.sub-title {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.about-text {
+    font-size: clamp(1.3rem, 2.5vw, 1.4rem);
+    letter-spacing: 1.5px;
+}
+
+.content-quote {
+    background-color: #242424;
+    padding: 2rem;
+    border-radius: 8px;
+    color: #ece7d5;
+}
+
+.content-quote blockquote {
+    font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.content-quote p {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 400;
+}
+
+.curiosities {
+    margin-block-start: 2rem;
+}
+
+.curiosities .sub-title,
+.albuns-section .sub-title,
+.live .sub-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.curiosities ol {
+    background-color: #242424;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    color: #ece7d5;
+}
+
+.curiosities ol li {
+    margin-block: 1.5rem;
+    font-size: clamp(1.3rem, 2.5vw, 1.4rem);
+}
+
+.grid-albuns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+}
+
+.album {
+    overflow: hidden;
+    border-radius: 6px;
+    display: grid;
+    gap: 8px;
+    background-color: #242424;
+    color: #ece7d5;
+    text-align: center;
+}
+
+.album div {
+    padding: 1rem;
+    display: grid;
+}
+
+.slide {
+    border: 3px solid #242424;
+    width: 95%;
+    height: 400px;
+    margin-inline: auto;
+    background: url("img/show-1.jpg");
+    background-position: center;
+    background-size: cover;
+    animation: slide 25s infinite;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #242424;
+}
+
+@keyframes slide {
+    25% {
+        background: url("img/show-2.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+    50% {
+        background: url("img/show-3.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+    75% {
+        background: url("img/show-4.png");
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+    100% {
+        background: url("img/show-1.jpg");
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+}
+
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #242424;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #ece7d5;
+}
