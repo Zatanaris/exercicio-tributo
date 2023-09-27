@@ -250,7 +250,6 @@ section {
 }
 
 *::-webkit-scrollbar-track {
-    border-radius: 5px;
     background-color: #242424;
 }
 
