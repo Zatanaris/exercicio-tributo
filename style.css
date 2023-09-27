@@ -80,7 +80,7 @@ section {
 .header::before {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 25px;
     left: 0;
     width: 150px;
     aspect-ratio: 1;
@@ -93,7 +93,7 @@ section {
 .header::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     right: 20px;
     width: 150px;
     aspect-ratio: 1;
@@ -104,7 +104,8 @@ section {
 }
 
 .logo {
-    max-width: 350px;
+    display: block;
+    width: min(350px, 100%);
     margin-inline: auto;
 }
 
